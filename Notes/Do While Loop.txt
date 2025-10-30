@@ -1,0 +1,27 @@
+The do...while loop runs the code first, then checks the condition at the end.
+
+Syntax:
+
+do
+{
+    // code to execute
+} while (condition);
+
+
+Example:
+
+int j = 1;
+
+do
+{
+    Console.WriteLine("Number: " + j);
+    j++;
+} while (j <= 5);
+
+Output:
+
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5

@@ -1,0 +1,72 @@
+A control structure in programming determines the flow of execution — that is, the order in which statements are executed in a program.
+
+Control structures allow you to make decisions, repeat actions, and control how your code behaves based on conditions.
+
+Types of Control Structures
+
+1. Sequential – Executes statements one after another.
+
+2. Selection (Decision-making) – Executes certain code blocks based on conditions.
+
+3. Iteration (Loops) – Repeats a block of code multiple times.
+
+4. Jump (Branching) – Transfers control to another part of the program (e.g., break, continue, goto, return).
+
+
+1. Sequential Control
+
+Console.WriteLine("Start");
+Console.WriteLine("Processing...");
+Console.WriteLine("End");
+
+2. Selection (Decision-making)
+
+int number = 10;
+
+if (number > 0)
+{
+    Console.WriteLine("Positive number");
+}
+else if (number < 0)
+{
+    Console.WriteLine("Negative number");
+}
+else
+{
+    Console.WriteLine("Zero");
+}
+
+
+The if...else structure controls which block executes based on the condition.
+
+
+3. Iteration (Loops)
+
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine("Iteration " + i);
+}
+
+
+The for loop repeats the statements 5 times.
+
+4. Jump (Branching)
+
+for (int i = 1; i <= 5; i++)
+{
+    if (i == 3)
+        continue;  // skip iteration when i == 3
+    Console.WriteLine(i);
+}
+
+
+The continue statement skips certain iterations.
+
+* Summary
+
+| Type       | Keyword Example                       | Purpose           |
+| ---------- | ------------------------------------- | ----------------- |
+| Sequential | –                                     | Executes in order |
+| Selection  | `if`, `switch`                        | Decision-making   |
+| Iteration  | `for`, `while`, `foreach`, `do`       | Repetition        |
+| Jump       | `break`, `continue`, `goto`, `return` | Control transfer  |

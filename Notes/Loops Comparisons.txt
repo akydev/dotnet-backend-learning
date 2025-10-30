@@ -1,0 +1,16 @@
+| Feature            | `while` loop                                 | `do...while` loop                           |
+| ------------------ | -------------------------------------------- | ------------------------------------------- |
+| Condition checked  | Before the loop starts                       | After each iteration                        |
+| Minimum executions | 0 times                                      | 1 time                                      |
+| Use case           | When you may not need to run the loop at all | When you need to run the loop at least once |
+
+Comparison Table
+
+| Feature                 | `for` Loop                         | `while` Loop                         | `do...while` Loop                |
+| ----------------------- | ---------------------------------- | ------------------------------------ | -------------------------------- |
+|   When to use           | When number of iterations is known | When number of iterations is unknown | When code must run at least once |
+|   Condition checked     | Before each iteration              | Before each iteration                | After each iteration             |
+|   Initialization        | Done in loop header                | Done before loop                     | Done before loop                 |
+|   Increment/Decrement   | In loop header                     | Inside loop body                     | Inside loop body                 |
+|   Minimum executions    | 0                                  | 0                                    | 1                                |
+|   Common use case       | Counting, fixed loops              | Reading data until condition met     | User input validation, menus     |
