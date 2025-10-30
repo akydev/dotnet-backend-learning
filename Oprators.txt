@@ -1,0 +1,30 @@
+* Aritmatioc Operators: Aritmatic operators are used to perform basic operations on numeric values.
+	1. Addition 		(+)
+	2. Subtraction 		(-)
+	3. Multiplication 	(*)
+	4. Division		(/)
+	5. Modulus		(%)
+
+* Relational Operators: Relational operators are used to compare values. And we get the answers in either true or false (Boolen Values).
+	1. Equal to		(=)
+	2. Not equal to		(!=)
+	3. Less than		(<)
+	4. Greater than		(>)
+	5. Greater than equal to(>=)
+
+* Logical Operators: Used when muliple conditions and there we can combine these to compare complex conditions.
+	1. Logical ANd		(&&)	: Retruns true when both conditions are true.
+	2. Logical Or		(||)	: Return ture if at least on conditon is true.
+	3. Logial Not		(!)	: Return the revers results
+
+* Assignment Operators: Assignement operators are used to assign the value to the variables. The assignment operators is combined with other to create shorthand compound statements. common compound operators include:
+	1. += (Add and assign)
+	2. -= (Subtract and assign)
+	3. *= (Multiply and Assign)
+	4. /= (Divide and assign)
+	5. %= (Modulo and assign)
+
+* Increment and decrement Operators: Increment and decrement are used to increase or decrease the value of a variable by 1.
+	1. ++ (Increment by 1) : Post increment : uses value first then increments and pre increent : increments first and then uses value.
+	2. -- (Decrcrement by 1) : Post decrement : uses value first then decrement and pre decrement : decrement first and then uses value.
+
