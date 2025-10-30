@@ -1,0 +1,60 @@
+//Product billing System.
+
+
+namespace ProductBilling
+{
+    public class ProductBilling
+    {
+        static void Main(string[] args)
+        {
+            double ice_creame = 70.00;
+            double wheat = 40.00;
+            double choco = 40.00;
+            double rice = 60.00;
+
+            Console.WriteLine("Product Billing System");
+            Console.WriteLine("Enter your ice_creame quantity: ");
+            double IC = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter your Wheat quantity: ");
+            double WH = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter your Wheat quantity: ");
+            double RI = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter your Wheat quantity: ");
+            double CH = Convert.ToDouble(Console.ReadLine());
+
+
+            double total = 0;
+            double discount_applied = 0;
+            double final_payable_amount;
+            total = (IC * ice_creame) + (WH * wheat) + (CH * choco) + (RI * rice);
+            Console.WriteLine("your total amount is: " + total);
+
+
+            if (total >= 100 && total <= 200)
+            {
+                Console.WriteLine("you got 5% discount");
+                discount_applied = (total * 5) / 100;
+                Console.WriteLine("you got discounted amount is : " + discount_applied);
+                final_payable_amount = (total - discount_applied);
+                Console.WriteLine("Your Final payable amount is : " + final_payable_amount);
+            }
+            else if(total>= 200)
+            {
+                Console.WriteLine("you got 10% discount");
+                discount_applied = (total * 10) / 100;
+                Console.WriteLine("you got discounted amount is : " + discount_applied);
+                final_payable_amount = (total - discount_applied);
+                Console.WriteLine("Your Final payable amount is : " + final_payable_amount);
+            }
+            else if (total < 100)
+            {
+                Console.WriteLine("No discount");
+                discount_applied = 0.00;
+                Console.WriteLine("you got discounted amount is : " + discount_applied);
+                final_payable_amount = (total - discount_applied);
+                Console.WriteLine("Your Final payable amount is : " + final_payable_amount);
+            }
+
+        }
+    }
+}

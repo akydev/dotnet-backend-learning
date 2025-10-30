@@ -1,0 +1,44 @@
+
+Console.WriteLine("Enter your Age: ");
+int age = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Your Age is : " + age);
+
+
+Console.WriteLine("Enter the value of a: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter the value of b: ");
+int b = Convert.ToInt32(Console.ReadLine());
+
+int Total = a + b;
+
+Console.WriteLine("For Sub ");
+Console.WriteLine("Enter the value of x: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the value of y: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+int sub = x - y;
+Console.WriteLine("The Sub of a and b : " + sub);
+
+Console.WriteLine("For Mul");
+Console.WriteLine("Enter the value of p: ");
+int p = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the value of q: ");
+int q = Convert.ToInt32(Console.ReadLine());
+
+int mul =  p * q;
+Console.WriteLine("The Sub of a and b : " + mul);
+
+
+Console.WriteLine("For Div");
+Console.WriteLine("Enter the value of m: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the value of n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int div = m/n;
+Console.WriteLine("The Sub of a and b : " + div);
+
+
+

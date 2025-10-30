@@ -1,0 +1,58 @@
+namespace program
+{
+    static class Myclass
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter your operation :");
+            char op = Convert.ToChar(Console.ReadLine());
+
+            
+
+            if (op == '+' || op == '-' || op == '*' || op == '/' || op == '%' )
+
+            {
+                Console.WriteLine("Enter the value 1: ");
+                double a = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter the value 2: ");
+                double b = Convert.ToDouble(Console.ReadLine());
+
+                double result = 0;
+
+                if (op == '+')
+                {
+                    result = a + b;
+                    Console.WriteLine("The Additio of value 1 and value 2 :" + result);
+                }
+                else if (op == '-')
+                {
+                    result = a - b;
+                    Console.WriteLine("The Subtraction of value 1 and value 2 :" + result);
+                }
+                else if (op == '*')
+                {
+                    result = a * b;
+                    Console.WriteLine("The Mul of value 1 and value 2 :" + result);
+                }
+                else if (op == '/')
+                {
+                    result = a / b;
+                    Console.WriteLine("The Div of value 1 and value 2 :" + result);
+                }
+                else if (op == '%')
+                {
+                    result = a % b;
+                    Console.WriteLine("The Mul of value 1 and value 2 :" + result);
+                }
+            }
+            
+            else
+            {
+                Console.WriteLine("Invalid Operation!");
+            }
+
+        }
+
+    }
+}

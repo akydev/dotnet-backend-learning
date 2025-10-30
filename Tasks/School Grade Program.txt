@@ -1,0 +1,108 @@
+using System;
+using System.Collections.Generic;
+
+namespace GradeProgram
+{
+    class Program
+    {
+        // Structure to hold subject details
+        class Subject
+        {
+            public string Name { get; set; }
+            public double Score { get; set; }
+            public bool IsPass => Score >= 40;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== Student Grade Program ===\n");
+
+            // Get student name
+            Console.Write("Enter student name: ");
+            string studentName = Console.ReadLine();
+
+            // Number of subjects
+            Console.Write("Enter number of subjects: ");
+            int subjectCount;
+            while (!int.TryParse(Console.ReadLine(), out subjectCount) || subjectCount <= 0)
+            {
+                Console.Write("Invalid input. Enter a positive number: ");
+            }
+
+            List<Subject> subjects = new List<Subject>();
+
+            // Input each subject name and score
+            for (int i = 1; i <= subjectCount; i++)
+            {
+                Console.WriteLine($"\nSubject {i}:");
+
+                Console.Write("Enter subject name: ");
+                string subjectName = Console.ReadLine();
+
+                Console.Write("Enter marks (0 - 100): ");
+                double mark;
+                while (!double.TryParse(Console.ReadLine(), out mark) || mark < 0 || mark > 100)
+                {
+                    Console.Write("Invalid input. Please enter a number between 0 and 100: ");
+                }
+
+                subjects.Add(new Subject { Name = subjectName, Score = mark });
+            }
+
+            // Calculate totals and check if failed any
+            double total = 0;
+            bool hasFailed = false;
+
+            foreach (var sub in subjects)
+            {
+                total += sub.Score;
+                if (!sub.IsPass)
+                    hasFailed = true;
+            }
+
+            double average = total / subjectCount;
+
+            // Determine overall grade
+            char grade;
+            if (average >= 90)
+                grade = 'A';
+            else if (average >= 80)
+                grade = 'B';
+            else if (average >= 70)
+                grade = 'C';
+            else if (average >= 60)
+                grade = 'D';
+            else
+                grade = 'F';
+
+            string result = hasFailed ? "FAIL" : "PASS";
+
+            // Display results
+            Console.WriteLine("\n--- Student Result ---");
+            Console.WriteLine($"Student Name : {studentName}");
+            Console.WriteLine($"Subjects     : {subjectCount}");
+            Console.WriteLine($"Average Marks: {average:F2}");
+            Console.WriteLine($"Grade        : {grade}");
+            Console.WriteLine($"Overall Result: {result}\n");
+
+            Console.WriteLine("Subject Details:");
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine($"{"Subject",-20} {"Marks",-10} {"Status",-10}");
+            Console.WriteLine("-----------------------------------");
+
+            foreach (var sub in subjects)
+            {
+                string status = sub.IsPass ? "Pass" : "Fail";
+                Console.WriteLine($"{sub.Name,-20} {sub.Score,-10} {status,-10}");
+            }
+
+            Console.WriteLine("-----------------------------------");
+
+            if (hasFailed)
+                Console.WriteLine("Note: Student failed in one or more subjects.");
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}
